@@ -3,23 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 00:41:39 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/21 09:28:34 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/01 08:42:09 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/05 23:39:28 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
 	int a;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
-		ft_putchar(str[a]);
-		a++;
-	}
+	a = -1;
+	while (str[++a])
+		write(1, &str[a], 1);
 }

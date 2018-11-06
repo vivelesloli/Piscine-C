@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/18 11:10:07 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/21 19:42:50 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/03 06:23:23 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/05 15:08:26 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,20 @@ void	ft_putstr(char *str)
 {
 	int a;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
+	a = -1;
+	while (str[++a])
 		ft_putchar(str[a]);
-		a++;
-	}
 }
 
-int		main(int argc, char **argv)
+int		main(int ac, char **av)
 {
-	argc = 0;
-	ft_putstr(argv[0]);
-	ft_putchar('\n');
+	int i;
+
+	i = 0;
+	if (ac != 0)
+	{
+		ft_putstr(av[i]);
+		ft_putchar('\n');
+	}
 	return (0);
 }

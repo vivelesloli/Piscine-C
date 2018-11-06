@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/16 05:47:39 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/16 05:48:41 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/03 06:27:26 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/05 23:31:21 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@ int		ft_strlen(char *str)
 	int nb;
 
 	nb = 0;
-	while (str[nb] != '\0')
-	{
+	while (str[nb])
 		nb++;
-	}
 	return (nb);
 }
