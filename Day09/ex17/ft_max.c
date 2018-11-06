@@ -3,17 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdankou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/11 11:27:56 by mdankou           #+#    #+#             */
-/*   Updated: 2017/08/11 15:19:00 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/09 09:14:00 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/10 03:25:42 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c)
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+void		ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (0);
 }
 
 void	ft_putnbr(int nb)
@@ -26,10 +29,8 @@ void	ft_putnbr(int nb)
 		ft_putchar('-');
 		i = -nb;
 	}
-	if (i / 10 == 0)
-	{
+	else if (i / 10 == 0)
 		ft_putchar(i % 10 + '0');
-	}
 	else
 	{
 		ft_putnbr(i / 10);
@@ -43,15 +44,12 @@ int		ft_max(int *tab, int length)
 	int max;
 	int nb;
 
-	i = 0;
+	i = -1;
 	max = *tab;
-	while (i < length)
+	while (++i < length)
 	{
 		if (max < *tab)
-		{
 			max = *tab;
-		}
-		i++;
 		tab++;
 	}
 	return (max);
