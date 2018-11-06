@@ -3,23 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/04 05:29:52 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/09 16:39:13 by mcharret         ###   ########.fr       */
+/*   Created: 2018/07/31 15:55:56 by matcharr          #+#    #+#             */
+/*   Updated: 2018/07/31 22:27:53 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {
 	if (n < 0)
-	{
 		ft_putchar('N');
-	}
 	else
-	{
 		ft_putchar('P');
-	}
 }

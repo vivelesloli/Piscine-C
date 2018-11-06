@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/31 15:41:07 by matcharr          #+#    #+#             */
-/*   Updated: 2018/07/31 22:24:00 by matcharr         ###   ########.fr       */
+/*   Created: 2018/08/01 01:41:08 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/01 17:06:34 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <limits.h>
 
 void	ft_putchar(char c);
 
-void	ft_print_numbers(void)
+void	ft_putnbr(int nb)
 {
-	int i;
-
-	i = '0';
-	while (i <= '9')
+	if (nb < 0)
 	{
-		ft_putchar(i);
-		i++;
+		ft_putchar('-');
+		if (nb == -2147483648)
+		{
+			ft_putchar('2');
+			nb = -147483648;
+		}
+		nb = nb * -1;
 	}
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	ft_putchar('0' + nb % 10);
 }

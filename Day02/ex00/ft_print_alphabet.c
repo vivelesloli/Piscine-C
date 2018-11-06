@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 10:11:32 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/09 02:16:25 by mcharret         ###   ########.fr       */
+/*   Created: 2018/07/31 09:11:49 by matcharr          #+#    #+#             */
+/*   Updated: 2018/07/31 22:13:46 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putchar(char c);
 
