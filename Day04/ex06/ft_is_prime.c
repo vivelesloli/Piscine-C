@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 15:53:19 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/12 15:53:20 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 05:22:37 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/02 08:19:24 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@ int		ft_is_prime(int nb)
 {
 	int i;
 
-	i = 2;
+	i = 1;
 	if (nb <= 1)
 		return (0);
-	while (i <= nb / i)
+	while (++i <= nb / ++i)
 	{
 		if (nb % i == 0)
 			return (0);
-		i++;
 	}
 	return (1);
 }
