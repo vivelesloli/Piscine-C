@@ -1,0 +1,6 @@
+Credentials cache: API:CC6CB34B-21E8-41E3-80E5-EE93CE6986B1
+        Principal: mcharret@42.FR
+
+  Issued                Expires               Principal
+Jul 31 14:21:49 2017  Aug  7 14:21:49 2017  krbtgt/42.FR@42.FR
+Jul 31 15:13:54 2017  Aug  7 14:21:49 2017  host/vgs-fn1.42.fr@42.FR
