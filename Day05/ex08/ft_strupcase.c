@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/17 22:17:32 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/22 10:09:32 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:50:48 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/06 07:09:02 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@ char	*ft_strupcase(char *str)
 {
 	int i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 			str[i] -= 32;
-		i++;
 	}
 	return (str);
 }

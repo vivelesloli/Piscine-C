@@ -3,27 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/15 09:03:09 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/22 10:06:54 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:52:46 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/06 07:13:41 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int		ft_str_is_lowercase(char *str)
 {
 	int i;
 
-	i = 0;
-	if (str[i] == '\0')
+	i = -1;
+	if (str[++i] == '\0')
 		return (1);
-	while (str[i])
+	while (str[++i])
 	{
 		if (str[i] < 'a' || str[i] > 'z')
 			return (0);
-		i++;
 	}
 	return (1);
 }

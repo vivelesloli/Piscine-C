@@ -3,35 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/14 01:46:38 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/22 09:23:07 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/08 01:35:00 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/19 21:07:37 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 char	*ft_strstr(char *str, char *to_find)
 {
-	int str_cursor;
-	int to_find_cursor;
-	int to_find_size;
-
-	str_cursor = 0;
-	to_find_size = 0;
-	while (to_find[to_find_size])
-		to_find_size++;
-	if (to_find_size == 0)
+	if (!*to_find)
 		return (str);
-	while (str[str_cursor])
-	{
-		to_find_cursor = 0;
-		while (str[str_cursor + to_find_cursor] == to_find[to_find_cursor])
-		{
-			if (to_find_cursor == to_find_size - 1)
-				return (str + str_cursor);
-			to_find_cursor++;
-		}
-		str_cursor++;
-	}
-	return (0);
+	else if (!*str)
+		return (NULL);
+	return (*to_find == *str && ft_strstr(str + 1, to_find + 1)
+			== str + 1) ? str : ft_strstr(str + 1, to_find);
 }

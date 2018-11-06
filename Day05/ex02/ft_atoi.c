@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 06:04:46 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/19 11:28:10 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:49:04 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/06 06:05:33 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ int		ft_atoi(char *str)
 	i = 0;
 	n = 0;
 	negatif = 1;
-	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n') ||
-	(str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
-	{
+	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
+			|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
 		i++;
-	}
 	if (str[i] == '-')
 		negatif = -1;
 	if ((str[i] == '-') || (str[i] == '+'))

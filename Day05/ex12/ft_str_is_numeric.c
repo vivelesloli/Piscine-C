@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/15 08:38:50 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/23 03:11:30 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:52:26 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/07 13:28:56 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@ int		ft_str_is_numeric(char *str)
 	int i;
 
 	i = 0;
-	if (str == '\0')
-		return (1);
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 			i++;

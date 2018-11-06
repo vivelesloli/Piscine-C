@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 04:19:17 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/21 19:40:09 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:48:48 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/06 07:00:46 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-#include <limits.h>
 
 void	ft_putchar(char c);
 
@@ -28,10 +25,6 @@ void	ft_putnbr(int nb)
 		nb = nb * -1;
 	}
 	if (nb >= 10)
-	{
 		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	if (nb < 10)
-		ft_putchar('0' + nb);
+	ft_putchar('0' + nb % 10);
 }

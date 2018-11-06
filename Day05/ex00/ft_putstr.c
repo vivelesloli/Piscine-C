@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/19 11:13:08 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/19 11:25:29 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:48:03 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/07 07:05:14 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@ void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
-	int a;
+	int i;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
-		ft_putchar(str[a]);
-		a++;
-	}
+	i = -1;
+	while (str[++i])
+		ft_putchar(str[i]);
 }

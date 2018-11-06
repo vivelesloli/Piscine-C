@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/15 09:54:20 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/21 05:37:23 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/07 06:28:19 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/08 20:34:36 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,13 @@ char	*ft_strcat(char *dest, char *src)
 	int i;
 
 	len = 0;
-	while (dest[len] != '\0')
+	while (dest[len])
 	{
 		len++;
 	}
-	i = 0;
-	while (src[i] != '\0')
-	{
+	i = -1;
+	while (src[++i])
 		dest[len + i] = src[i];
-		i++;
-	}
 	dest[len + i] = '\0';
 	return (dest);
 }

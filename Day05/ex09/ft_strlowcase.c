@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/15 21:09:19 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/22 09:58:42 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/02 20:51:04 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/06 07:09:36 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@ char	*ft_strlowcase(char *str)
 {
 	int i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
-		i++;
 	}
 	return (str);
 }

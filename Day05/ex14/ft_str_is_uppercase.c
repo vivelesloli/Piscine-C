@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/15 09:11:44 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/23 05:36:48 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/07 07:01:43 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/07 12:14:04 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@ int		ft_str_is_uppercase(char *str)
 	int i;
 	int compteur;
 
+	compteur = 0;
 	i = 0;
 	if (str[i] == '\0')
 		return (1);
 	while (str[i])
 	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 			i++;
 		else
 		{
@@ -29,7 +30,7 @@ int		ft_str_is_uppercase(char *str)
 		}
 	}
 	if (compteur != 0)
-		return(0);
+		return (0);
 	else
-		return(1);
+		return (1);
 }
