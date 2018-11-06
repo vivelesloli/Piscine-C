@@ -1,3 +1,2 @@
-ldapwhoami -Q | cat | cut -c 4-
-
+ldapwhoami -Q |cat| cut -c 4-
 

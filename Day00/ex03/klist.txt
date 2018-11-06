@@ -1,6 +1,7 @@
-Credentials cache: API:CC6CB34B-21E8-41E3-80E5-EE93CE6986B1
-        Principal: mcharret@42.FR
+Credentials cache: API:E048B8A3-FB72-4EC5-869A-A1A3A0393E7C
+        Principal: matcharr@42.FR
 
   Issued                Expires               Principal
-Jul 31 14:21:49 2017  Aug  7 14:21:49 2017  krbtgt/42.FR@42.FR
-Jul 31 15:13:54 2017  Aug  7 14:21:49 2017  host/vgs-fn1.42.fr@42.FR
+Jul 30 14:09:15 2018  Aug  6 14:09:15 2018  krbtgt/42.FR@42.FR
+Jul 30 14:09:18 2018  Aug  6 14:09:15 2018  ldap/ldap-proxy.42.fr@42.FR
+Jul 30 14:09:18 2018  Aug  6 14:09:15 2018  HTTP/student-storage-2.42.fr@42.FR
