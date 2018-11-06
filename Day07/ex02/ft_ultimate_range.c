@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 07:48:53 by matcharr          #+#    #+#             */
-/*   Updated: 2018/08/14 10:08:58 by matcharr         ###   ########.fr       */
+/*   Created: 2018/08/09 01:09:56 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/17 09:06:11 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char		*ft_strdup(char *src)
+int		ft_ultimate_range(int **range, int min, int max)
 {
-	int		i;
-	char	*dest;
+	int i;
+	int *tab;
+	int stock;
 
-	i = -1;
-	dest = (char*)malloc(sizeof(src) * sizeof(char));
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	i = 0;
+	stock = min;
+	if (min >= max)
+	{
+		*range = 0;
+		return (0);
+	}
+	tab = (int*)malloc(sizeof(int) * (max - min));
+	if (tab == 0)
+		return (0);
+	while (min < max)
+	{
+		tab[i] = min;
+		min++;
+		i++;
+	}
+	*range = tab;
+	return (max - stock);
 }

@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 07:48:53 by matcharr          #+#    #+#             */
-/*   Updated: 2018/08/14 10:08:58 by matcharr         ###   ########.fr       */
+/*   Created: 2018/08/09 07:55:56 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/09 11:35:44 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char		*ft_strdup(char *src)
-{
-	int		i;
-	char	*dest;
+void	ft_putchar(char c);
 
-	i = -1;
-	dest = (char*)malloc(sizeof(src) * sizeof(char));
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+void	ft_print_words_tables(char **tab)
+{
+	int x;
+	int y;
+
+	x = -1;
+	while (tab[++x])
+	{
+		y = -1;
+		while (tab[x][++y])
+			ft_putchar(tab[x][y]);
+		ft_putchar('\n');
+	}
 }
