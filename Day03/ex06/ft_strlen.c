@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: matcharr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/07 12:40:35 by mcharret          #+#    #+#             */
-/*   Updated: 2017/08/08 13:13:00 by mcharret         ###   ########.fr       */
+/*   Created: 2018/08/01 03:32:17 by matcharr          #+#    #+#             */
+/*   Updated: 2018/08/01 17:31:36 by matcharr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int nb;
 
 	nb = 0;
-	while (str[nb] != '\0')
+	while (str[nb])
 	{
 		nb++;
 	}
